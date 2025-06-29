@@ -26,16 +26,16 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: #00ffc8;
   font-weight: 700;
   text-shadow: 0 0 8px #00ffc8;
+  gap: 0.4em;
 }
 .logo img {
-  height: 50px;
+  height: 40px;
   filter: drop-shadow(0 0 6px #00ffc8aa);
   vertical-align: middle;
-  margin-right: 0.5em;
 }
 
 /* === HEADER RIGHT === */
@@ -43,6 +43,7 @@ header {
   display: flex;
   align-items: center;
   gap: 1em;
+  flex-wrap: wrap;
 }
 
 /* === LANGUAGE SELECTOR === */
@@ -187,20 +188,18 @@ footer {
 /* === RESPONSIVE HEADER === */
 @media (max-width: 768px) {
   header {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 1em;
   }
 
-  .logo {
-    font-size: 1.5em;
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
   }
 
-  .header-right {
-    flex-wrap: wrap;
-    gap: 0.5em;
+  .logo {
+    font-size: 1.4em;
   }
 
   .btn-profile,

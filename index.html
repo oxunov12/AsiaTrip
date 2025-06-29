@@ -8,36 +8,41 @@
 </head>
 <body>
 
+  <!-- === HEADER === -->
   <header class="main-header">
-    <!-- Logo chapda -->
-    <a href="#" class="logo">
-      <img src="logo.svg" alt="AsiaTip Logo" />
-    </a>
+    <!-- LOGO (chapda) -->
+    <div class="header-left">
+      <a href="#" class="logo">
+        <img src="logo.svg" alt="AsiaTip" />
+      </a>
+    </div>
 
-    <!-- Tillar markazda -->
-    <div class="language-selector">
-      <select>
+    <!-- TILLAR (markazda) -->
+    <div class="header-center">
+      <select class="language-selector">
+        <option value="uz">🇺🇿</option>
+        <option value="ru">🇷🇺</option>
         <option value="kg">🇰🇬</option>
         <option value="kz">🇰🇿</option>
         <option value="tj">🇹🇯</option>
-        <option value="uz">🇺🇿</option>
-        <option value="ru">🇷🇺</option>
       </select>
     </div>
 
-    <!-- Profil tugmasi o‘ngda -->
-    <a href="#" class="profile-button">Profil</a>
+    <!-- PROFIL (o‘ngda) -->
+    <div class="header-right">
+      <button class="profile-button">Profil</button>
+    </div>
   </header>
 
-  <!-- Hero section -->
+  <!-- === HERO === -->
   <section class="hero">
     <h1>Start Receiving Tips Now</h1>
     <p>Asia's premium donation platform for streamers and creators</p>
     <a href="#" class="btn-primary">Get Started</a>
   </section>
 
-  <!-- Features -->
-  <section class="features section">
+  <!-- === Features === -->
+  <section class="features">
     <h2>⚡ Features</h2>
     <ul>
       <li>Real-time donation alerts</li>
@@ -47,25 +52,27 @@
     </ul>
   </section>
 
-  <!-- How It Works -->
-  <section class="how section">
+  <!-- === How it works === -->
+  <section class="how">
     <h2>🔧 How It Works</h2>
-    <p>1. Sign up and create your tip link</p>
-    <p>2. Add your widget to OBS or Streamlabs</p>
-    <p>3. Share with fans and start earning!</p>
-  </section>
-
-  <!-- Pricing -->
-  <section class="pricing section">
-    <h2>💎 Pricing</h2>
-    <div class="plans">
-      <div class="plan"> <h3>Free</h3> <p>Basic features</p> </div>
-      <div class="plan"> <h3>Pro</h3> <p>More widgets + analytics</p> </div>
-      <div class="plan premium"> <h3>Premium ⭐</h3> <p>All features + VIP support</p> </div>
+    <div class="steps">
+      <p>1. Sign up and create your tip link</p>
+      <p>2. Add your widget to OBS or Streamlabs</p>
+      <p>3. Share with fans and start earning!</p>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- === Pricing === -->
+  <section class="pricing">
+    <h2>💎 Pricing</h2>
+    <div class="plans">
+      <div class="plan"> <h3>Free</h3><p>Basic features</p></div>
+      <div class="plan"> <h3>Pro</h3><p>More widgets + analytics</p></div>
+      <div class="plan"> <h3>Premium ⭐</h3><p>All features + VIP support</p></div>
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
   <footer>
     <p>© 2025 AsiaTip. All rights reserved.</p>
     <p>Contact: support@asiatip.com</p>

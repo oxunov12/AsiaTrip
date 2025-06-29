@@ -1,84 +1,77 @@
-/* === GLOBAL === */
 body {
   margin: 0;
+  background-color: #0b0b0b;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
-  color: #ffffff;
-  overflow-x: hidden;
+  color: #fff;
 }
 
-a {
-  text-decoration: none;
-  color: #00ffc8;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* === HEADER === */
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 16px 24px;
   background-color: #000;
-  height: 72px;
-  padding: 0 32px;
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 0 12px rgba(0, 255, 200, 0.1);
+  height: 72px;
 }
 
-.header-left, .header-center, .header-right {
-  flex: 1;
+/* Header elements: left / center / right */
+.header-left,
+.header-center,
+.header-right {
   display: flex;
   align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Center: Til tanlash */
+.header-center {
+  flex: 1;
   justify-content: center;
 }
 
-/* Logo */
-.logo img {
-  height: 40px;
-  filter: drop-shadow(0 0 5px #00ffc8aa);
-}
-
-/* Language Selector */
 .language-selector {
-  background: #1e1e1e;
-  color: #fff;
+  background-color: #1c1c1c;
+  color: white;
   border: 1px solid #444;
+  padding: 6px 12px;
   border-radius: 6px;
-  padding: 8px 14px;
-  font-weight: 600;
   font-size: 1em;
+  font-weight: bold;
   cursor: pointer;
-  transition: border-color 0.2s;
+  box-shadow: 0 0 8px rgba(0, 255, 200, 0.3);
+  transition: all 0.2s ease;
 }
 
 .language-selector:hover {
   border-color: #00ffc8;
 }
 
-/* Profile Button */
+/* Right: Profil tugmasi */
 .profile-button {
-  background-color: #00ffc8;
-  color: #121212;
+  background-color: #ff6a00;
+  color: #fff;
   border: none;
+  padding: 8px 16px;
   border-radius: 6px;
-  padding: 10px 20px;
   font-weight: bold;
   font-size: 1em;
   cursor: pointer;
-  box-shadow: 0 0 12px #00ffc870;
-  transition: background 0.3s ease;
+  box-shadow: 0 0 12px rgba(255, 106, 0, 0.6);
+  transition: background 0.2s ease;
 }
 
 .profile-button:hover {
-  background-color: #00e6b8;
+  background-color: #e85c00;
 }
 
-/* === HERO === */
+/* HERO */
 .hero {
   text-align: center;
   padding: 100px 20px 80px;
@@ -87,13 +80,13 @@ a:hover {
 .hero h1 {
   font-size: 3em;
   color: #00ffc8;
-  text-shadow: 0 0 10px #00ffc880;
+  text-shadow: 0 0 12px #00ffc880;
   margin-bottom: 0.5em;
 }
 
 .hero p {
-  color: #ccc;
   font-size: 1.2em;
+  color: #aaa;
   margin-bottom: 2em;
 }
 
@@ -113,91 +106,23 @@ a:hover {
   box-shadow: 0 0 24px #00ffc8aa;
 }
 
-/* === FEATURES, HOW, PRICING === */
-section {
-  padding: 80px 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.features ul {
-  list-style: disc;
-  padding-left: 1.5em;
-  font-size: 1.1em;
-}
-
-.features li {
-  margin-bottom: 0.8em;
-}
-
-/* === PLANS === */
-.plans {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: space-between;
-  margin-top: 40px;
-}
-
-.plan {
-  background: #1e1e1e;
-  padding: 32px;
-  border-radius: 12px;
-  flex: 1 1 250px;
-  text-align: center;
-  box-shadow: 0 0 16px rgba(0, 255, 200, 0.08);
-  transition: 0.3s ease;
-}
-
-.plan:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 24px rgba(0, 255, 200, 0.2);
-}
-
-.plan h3 {
-  color: #00ffc8;
-  font-size: 1.4em;
-  margin-bottom: 0.6em;
-}
-
-/* === FOOTER === */
-footer {
-  background: #111;
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 0.9em;
-  color: #888;
-}
-
-/* === RESPONSIVE === */
+/* Responsive layout */
 @media (max-width: 768px) {
   .main-header {
     flex-direction: column;
     height: auto;
     gap: 12px;
-    padding: 12px 20px;
   }
 
-  .header-left, .header-center, .header-right {
+  .header-center {
+    order: 2;
+  }
+
+  .header-left, .header-right {
     justify-content: center;
   }
 
   .hero h1 {
-    font-size: 2.2em;
-  }
-
-  .btn-primary {
-    font-size: 1em;
-    padding: 12px 22px;
-  }
-
-  .logo img {
-    height: 36px;
-  }
-
-  .language-selector,
-  .profile-button {
-    height: 42px;
-    font-size: 0.95em;
+    font-size: 2em;
   }
 }

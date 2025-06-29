@@ -12,14 +12,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
-  background: rgba(20, 20, 20, 0.9);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 12px rgba(0, 255, 200, 0.12);
-  position: sticky;
+  padding: 12px 24px;
+  background: #141414;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
-  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  height: 64px; /* фиксированная высота — как у DonationAlerts */
 }
 
 /* === LOGO === */

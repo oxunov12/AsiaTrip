@@ -35,10 +35,12 @@ header {
   margin-right: 8px;
 }
 .logo span {
-  font-size: 1.6em;
-  font-weight: 700;
+  font-size: 1.4em;
+  font-weight: 600;
   color: #00ffc8;
-  text-shadow: 0 0 6px #00ffc8aa;
+  text-shadow: none;
+  line-height: 1;
+  margin-top: 2px;
 }
 
 /* === HEADER RIGHT === */

@@ -30,8 +30,9 @@ header {
   gap: 0.6em;
 }
 .logo img {
-  height: 40px;
-  filter: drop-shadow(0 0 6px #00ffc8aa);
+  height: 32px; /* было 40px, немного уменьшаем */
+  filter: none; /* убираем glow, как у DonationAlerts */
+  margin-right: 8px;
 }
 .logo span {
   font-size: 1.6em;

@@ -1,4 +1,8 @@
 /* === GLOBAL STYLES === */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -16,41 +20,33 @@ a:hover {
   text-decoration: underline;
 }
 
-/* === HEADER YANGI === */
+/* === HEADER - PREMIUM STYLE === */
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 0 32px;
+  height: 72px;
   background: rgba(20, 20, 20, 0.95);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 12px rgba(0, 255, 200, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 72px;
-  gap: 24px;
 }
 
 .header-left,
-.header-center,
 .header-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 }
 
 .header-left {
   flex: 1;
 }
 
-.header-center {
-  flex: 1;
-  justify-content: center;
-}
-
 .header-right {
-  flex: 1;
   justify-content: flex-end;
 }
 
@@ -58,39 +54,29 @@ a:hover {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6em;
-  text-decoration: none;
 }
 
 .logo img {
-  height: 40px;
-  filter: drop-shadow(0 0 6px #00ffc8aa);
-}
-
-.logo span {
-  font-size: 1.6em;
-  font-weight: 700;
-  color: #00ffc8;
-  text-shadow: 0 0 6px #00ffc8aa;
-}
-
-/* === HEADER RIGHT === */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  height: 44px;
+  filter: drop-shadow(0 0 8px #00ffc880);
 }
 
 /* === LANGUAGE SELECTOR === */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+}
+
 .lang-switcher select {
   background: #1e1e1e;
   color: white;
-  border: 1px solid #444;
+  border: 1px solid #333;
   padding: 10px 16px;
   border-radius: 6px;
   font-size: 1em;
   height: 44px;
   cursor: pointer;
+  transition: border 0.2s ease;
 }
 
 .lang-switcher select:hover {
@@ -110,6 +96,7 @@ a:hover {
   height: 44px;
   display: flex;
   align-items: center;
+  transition: all 0.2s ease;
 }
 
 .btn-profile:hover {
@@ -153,17 +140,13 @@ a:hover {
 }
 
 /* === FEATURES / HOW / PRICING === */
-.features,
-.how,
-.pricing {
+.section {
   padding: 80px 24px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.features h2,
-.how h2,
-.pricing h2 {
+.section h2 {
   font-size: 2em;
   margin-bottom: 1em;
   color: #ffffff;
@@ -179,13 +162,7 @@ a:hover {
   margin-bottom: 1em;
 }
 
-/* === HOW === */
-.steps p {
-  margin-bottom: 1.2em;
-  font-size: 1.1em;
-}
-
-/* === PRICING === */
+/* === PLANS === */
 .plans {
   display: flex;
   justify-content: space-between;
@@ -226,23 +203,17 @@ footer {
   border-top: 1px solid #222;
 }
 
-/* === RESPONSIVE — PLANSHEET & PHONE === */
+/* === RESPONSIVE === */
 @media (max-width: 1024px) {
-  header {
-    padding: 16px 24px;
-    height: auto;
+  .main-header {
     flex-direction: column;
-    gap: 12px;
+    height: auto;
+    gap: 16px;
   }
 
+  .header-left,
   .header-right {
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
-  }
-
-  .logo span {
-    font-size: 1.4em;
   }
 
   .hero h1 {
@@ -257,11 +228,7 @@ footer {
 
 @media (max-width: 600px) {
   .logo img {
-    height: 32px;
-  }
-
-  .logo span {
-    font-size: 1.2em;
+    height: 36px;
   }
 
   .hero h1 {

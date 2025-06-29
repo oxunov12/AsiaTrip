@@ -1,44 +1,43 @@
 body {
   margin: 0;
-  background-color: #111;
   font-family: 'Poppins', sans-serif;
+  background-color: #111;
   color: white;
 }
 
-/* HEADER */
+/* ==== HEADER ==== */
 .main-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background-color: #000; /* qora fon */
+  justify-content: space-between;
+  background-color: #000;
+  padding: 0 30px;
   height: 72px;
-  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
 }
 
-/* LOGO */
+/* === LOGO === */
 .logo img {
   height: 40px;
   display: block;
 }
 
-/* RIGHT SIDE */
-.header-right {
+/* === CENTER (LANGUAGE SELECTOR) === */
+.lang-wrapper {
+  flex: 1;
   display: flex;
-  align-items: center;
-  gap: 15px;
+  justify-content: center;
 }
 
-/* TIL SELECTOR */
 .language-selector {
   background: transparent;
   color: white;
   border: 1px solid #555;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 8px 16px;
+  border-radius: 6px;
   font-weight: bold;
   font-size: 1em;
   height: 40px;
@@ -49,13 +48,18 @@ body {
   border-color: #ff6a00;
 }
 
-/* PROFILE BUTTON */
+/* === RIGHT SIDE (PROFILE) === */
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .profile-button {
   background-color: #ff6a00;
   color: white;
   border: none;
-  padding: 7px 15px;
-  border-radius: 5px;
+  padding: 8px 18px;
+  border-radius: 6px;
   font-weight: bold;
   font-size: 1em;
   height: 40px;
@@ -68,7 +72,7 @@ body {
   background-color: #e85c00;
 }
 
-/* === HERO SECTION === */
+/* === HERO === */
 .hero {
   text-align: center;
   padding: 100px 24px 80px;
@@ -103,7 +107,7 @@ body {
   box-shadow: 0 0 24px #00ffc8aa;
 }
 
-/* === FEATURES / HOW / PRICING === */
+/* === SECTIONS === */
 .section {
   padding: 80px 24px;
   max-width: 1100px;
@@ -168,49 +172,26 @@ footer {
 }
 
 /* === RESPONSIVE === */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .main-header {
     flex-direction: column;
     height: auto;
-    gap: 16px;
+    padding: 20px;
+    gap: 12px;
   }
 
-  .header-left,
-  .header-right {
+  .lang-wrapper {
+    order: 2;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .profile-wrapper {
+    order: 3;
     justify-content: center;
   }
 
-  .hero h1 {
-    font-size: 2.2em;
-  }
-
-  .plans {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .logo img {
-    height: 36px;
-  }
-
-  .hero h1 {
-    font-size: 1.8em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
-  .btn-primary {
-    font-size: 1em;
-    padding: 12px 20px;
-  }
-
-  .lang-switcher select,
-  .btn-profile {
-    height: 40px;
-    font-size: 0.95em;
+  .logo {
+    order: 1;
   }
 }

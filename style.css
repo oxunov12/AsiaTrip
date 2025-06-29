@@ -11,15 +11,16 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* выравнивает всё по вертикали */
   padding: 12px 24px;
-  background: #141414;
-  position: fixed;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.12);
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  height: 64px; /* фиксированная высота — как у DonationAlerts */
+  height: 64px; /* фиксированная высота */
+  flex-wrap: nowrap; /* УБРАЛИ wrap — теперь не "провисает" */
 }
 
 /* === LOGO === */

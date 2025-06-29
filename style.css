@@ -24,6 +24,8 @@ header {
 
 /* === LOGO === */
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 1.8em;
   color: #00ffc8;
   font-weight: 700;
@@ -33,9 +35,10 @@ header {
   height: 50px;
   filter: drop-shadow(0 0 6px #00ffc8aa);
   vertical-align: middle;
+  margin-right: 0.5em;
 }
 
-/* === HEADER RIGHT (langs + profil) === */
+/* === HEADER RIGHT === */
 .header-right {
   display: flex;
   align-items: center;
@@ -160,6 +163,11 @@ section {
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 255, 200, 0.05);
 }
+.plan.pro {
+  border: 2px solid #00b8ff;
+  background-color: #182038;
+  box-shadow: 0 0 14px rgba(0, 184, 255, 0.1);
+}
 .plan.premium {
   border: 2px solid #00ffc8;
   background-color: #182828;
@@ -186,17 +194,11 @@ footer {
     gap: 1em;
   }
 
-  .header-left {
-    flex: 1 1 auto;
-  }
-
   .logo {
     font-size: 1.5em;
   }
 
   .header-right {
-    flex: 1 1 auto;
-    justify-content: flex-end;
     flex-wrap: wrap;
     gap: 0.5em;
   }

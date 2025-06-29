@@ -47,7 +47,7 @@ header {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 12px;
 }
 
 /* === LANGUAGE SELECTOR === */

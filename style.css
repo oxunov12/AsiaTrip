@@ -12,20 +12,21 @@ header {
   align-items: center;
   padding: 1em 2em;
   background-color: #1e1e1e;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
-.logo img {
-  height: 36px;
+.header-left .logo {
+  height: 48px;
   object-fit: contain;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 0.8em;
+  gap: 1em;
 }
 
+/* === LANG SWITCHER === */
 .lang-switcher select {
   background: #1e1e1e;
   color: white;
@@ -36,6 +37,12 @@ header {
   cursor: pointer;
 }
 
+.lang-switcher select:hover {
+  border-color: #00ffc8;
+  background-color: #2a2a2a;
+}
+
+/* === PROFILE BUTTON === */
 .btn-profile {
   padding: 0.5em 1em;
   font-size: 0.9em;
@@ -53,30 +60,32 @@ header {
   background-color: #00e6b8;
 }
 
-/* === RESPONSIVE (phone view) === */
-@media (max-width: 480px) {
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
   header {
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .header-left {
+    width: 100%;
   }
 
   .logo {
-    width: 100%;
-    margin-bottom: 0.5em;
+    height: 40px;
   }
 
   .header-right {
-    width: 100%;
+    margin-left: auto;
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 0.6em;
   }
 
+  .lang-switcher select,
   .btn-profile {
-    font-size: 0.8em;
+    font-size: 0.85em;
     padding: 0.4em 0.8em;
-  }
-
-  .logo img {
-    height: 28px;
   }
 }

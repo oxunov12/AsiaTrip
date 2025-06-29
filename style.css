@@ -1,107 +1,71 @@
-/* === GLOBAL STYLES === */
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
+  background-color: #111;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
-  color: #ffffff;
-  overflow-x: hidden;
+  color: white;
 }
 
-a {
-  color: #00ffc8;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* === HEADER - PREMIUM STYLE === */
+/* HEADER */
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 32px;
+  padding: 15px 30px;
+  background-color: #000; /* qora fon */
   height: 72px;
-  background: rgba(20, 20, 20, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 12px rgba(0, 255, 200, 0.1);
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.header-left,
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.header-left {
-  flex: 1;
-}
-
-.header-right {
-  justify-content: flex-end;
-}
-
-/* === LOGO === */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
+/* LOGO */
 .logo img {
-  height: 44px;
-  filter: drop-shadow(0 0 8px #00ffc880);
+  height: 40px;
+  display: block;
 }
 
-/* === LANGUAGE SELECTOR === */
-.lang-switcher {
+/* RIGHT SIDE */
+.header-right {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
-.lang-switcher select {
-  background: #1e1e1e;
+/* TIL SELECTOR */
+.language-selector {
+  background: transparent;
   color: white;
-  border: 1px solid #333;
-  padding: 10px 16px;
-  border-radius: 6px;
+  border: 1px solid #555;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
   font-size: 1em;
-  height: 44px;
+  height: 40px;
   cursor: pointer;
-  transition: border 0.2s ease;
 }
 
-.lang-switcher select:hover {
-  border-color: #00ffc8;
+.language-selector:hover {
+  border-color: #ff6a00;
 }
 
-/* === PROFILE BUTTON === */
-.btn-profile {
-  background: #00ffc8;
-  color: #121212;
-  padding: 10px 20px;
+/* PROFILE BUTTON */
+.profile-button {
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-weight: bold;
   font-size: 1em;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 0 12px #00ffc870;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  transition: all 0.2s ease;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.4);
+  transition: background 0.2s ease;
 }
 
-.btn-profile:hover {
-  background: #00e6b8;
-  box-shadow: 0 0 20px #00ffc8aa;
+.profile-button:hover {
+  background-color: #e85c00;
 }
 
 /* === HERO SECTION === */

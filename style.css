@@ -16,8 +16,8 @@ a:hover {
   text-decoration: underline;
 }
 
-/* === HEADER === */
-header {
+/* === HEADER YANGI === */
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,29 @@ header {
   top: 0;
   z-index: 1000;
   height: 72px;
-  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.header-right {
+  flex: 1;
+  justify-content: flex-end;
 }
 
 /* === LOGO === */

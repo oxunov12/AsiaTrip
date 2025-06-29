@@ -19,6 +19,13 @@ header {
   color: #00ffc8;
 }
 
+/* === Logo rasmi (SVG) === */
+.logo img {
+  height: 36px;
+  vertical-align: middle;
+}
+/* === /Logo === */
+
 /* === Lang switcher === */
 .lang-switcher {
   margin-right: 1em;
